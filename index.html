@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio · Automações com IA via WhatsApp</title>
+  <meta name="description" content="Workflows inteligentes que conectam IA, dados e ferramentas reais pelo WhatsApp — sem abrir um aplicativo diferente." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.5.0/tabler-icons.min.css" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Layout ── */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,17,23,.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid #21262d;
+    }
+    .nav-inner {
+      max-width: 900px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800; font-size: 1.1rem;
+      color: #f0f6fc;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo span { color: #38bdf8; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-size: 13px; color: #8b949e; font-weight: 400;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: #f0f6fc; }
+    .nav-cta {
+      background: #38bdf8; color: #0d1117 !important;
+      padding: 7px 18px; border-radius: 8px; font-weight: 500 !important;
+      font-size: 13px !important; transition: opacity .2s !important;
+    }
+    .nav-cta:hover { opacity: .85; color: #0d1117 !important; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 7rem 1.5rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 90% 70% at 50% -10%, #132237 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0; pointer-events: none; opacity: .04;
+      background-image:
+        linear-gradient(#38bdf8 1px, transparent 1px),
+        linear-gradient(90deg, #38bdf8 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #112233; color: #60a5fa;
+      font-size: 11px; font-weight: 500;
+      padding: 5px 14px; border-radius: 20px;
+      letter-spacing: .08em; text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      border: 0.5px solid #1e3a5f;
+    }
+    .badge i { font-size: 13px; }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800; color: #f0f6fc;
+      line-height: 1.08; margin-bottom: 1.25rem;
+      letter-spacing: -.02em;
+    }
+    .hero h1 .accent { color: #38bdf8; }
+    .hero h1 .wa { color: #4ade80; }
+    .hero p {
+      font-size: 1.05rem; color: #8b949e;
+      max-width: 520px; margin: 0 auto 2.5rem;
+      line-height: 1.65; font-weight: 300;
+    }
+    .hero-cta {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #38bdf8; color: #0d1117;
+      padding: 12px 28px; border-radius: 8px;
+      font-weight: 500; font-size: 14px;
+      border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: opacity .2s, transform .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: #f0f6fc;
+      padding: 12px 28px; border-radius: 8px;
+      font-weight: 400; font-size: 14px;
+      border: 0.5px solid #30363d; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: border-color .2s, transform .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-outline:hover { border-color: #8b949e; transform: translateY(-1px); }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 3rem;
+      margin-top: 3.5rem; padding-top: 2.5rem;
+      border-top: 0.5px solid #21262d;
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem; font-weight: 800;
+      color: #f0f6fc; display: block;
+    }
+    .stat-label { font-size: 12px; color: #8b949e; margin-top: 2px; }
+
+    /* ── Section headers ── */
+    .section { padding: 4rem 1.5rem; }
+    .section-label {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: #38bdf8; margin-bottom: .5rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label::before {
+      content: ''; display: inline-block;
+      width: 20px; height: 1.5px; background: #38bdf8;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700; color: #f0f6fc;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Workflow Cards ── */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card {
+      background: #161b22;
+      border: 0.5px solid #21262d;
+      border-radius: 14px;
+      padding: 1.75rem;
+      transition: border-color .25s, transform .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      opacity: 0; transition: opacity .3s;
+    }
+    .card:hover { border-color: #30363d; transform: translateY(-3px); }
+    .card:hover::before { opacity: 1; }
+    .card-rh::before { background: linear-gradient(90deg, #60a5fa, #38bdf8); }
+    .card-agenda::before { background: linear-gradient(90deg, #4ade80, #34d399); }
+    .card-tradutor::before { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+
+    .card-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; font-size: 22px;
+    }
+    .icon-blue { background: #112233; }
+    .icon-green { background: #0a2d1e; }
+    .icon-amber { background: #2d1f06; }
+    .card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: #f0f6fc; margin-bottom: .5rem;
+    }
+    .card p {
+      font-size: 13.5px; color: #8b949e;
+      line-height: 1.65; margin-bottom: 1.25rem;
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+    .tag {
+      font-size: 11px; padding: 3px 11px;
+      border-radius: 20px; font-weight: 500;
+    }
+    .tag-blue { background: #112233; color: #60a5fa; border: 0.5px solid #1e3a5f; }
+    .tag-green { background: #0a2d1e; color: #4ade80; border: 0.5px solid #14532d; }
+    .tag-amber { background: #2d1f06; color: #fbbf24; border: 0.5px solid #5a3a08; }
+
+    /* ── Flow diagram ── */
+    .flow-box {
+      background: #0d1117;
+      border: 0.5px solid #21262d;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+    }
+    .flow-label {
+      font-size: 10px; text-transform: uppercase;
+      letter-spacing: .1em; color: #484f58;
+      margin-bottom: .75rem; font-weight: 600;
+    }
+    .flow-steps {
+      display: flex; align-items: center;
+      gap: 4px; flex-wrap: wrap;
+    }
+    .step {
+      background: #161b22;
+      border: 0.5px solid #30363d;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px; color: #c9d1d9;
+      white-space: nowrap;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .step i { font-size: 12px; }
+    .flow-arrow { color: #484f58; font-size: 10px; }
+
+    /* ── How it works ── */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .how-item {
+      background: #161b22;
+      border: 0.5px solid #21262d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .how-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem; font-weight: 800;
+      color: #21262d; margin-bottom: .75rem;
+      line-height: 1;
+    }
+    .how-item h4 {
+      font-size: 14px; font-weight: 500;
+      color: #f0f6fc; margin-bottom: .4rem;
+    }
+    .how-item p {
+      font-size: 12.5px; color: #8b949e; line-height: 1.55;
+    }
+
+    /* ── Tech stack ── */
+    .tech-grid {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .tech-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: #161b22;
+      border: 0.5px solid #21262d;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px; color: #c9d1d9;
+      font-weight: 400;
+    }
+    .tech-pill i { font-size: 16px; color: #38bdf8; }
+
+    /* ── About ── */
+    .about-box {
+      background: #161b22;
+      border: 0.5px solid #21262d;
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+    }
+    .avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #112233;
+      border: 2px solid #1e3a5f;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem; font-weight: 800;
+      color: #38bdf8; flex-shrink: 0;
+    }
+    .about-text h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: #f0f6fc; margin-bottom: .2rem;
+    }
+    .about-role {
+      font-size: 12px; color: #38bdf8;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: .75rem;
+    }
+    .about-text p {
+      font-size: 13.5px; color: #8b949e; line-height: 1.65;
+    }
+
+    /* ── Contact / CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, #0f2744 0%, #0a2218 100%);
+      border: 0.5px solid #1e3a5f;
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 0 0 4rem;
+    }
+    .cta-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700; color: #f0f6fc;
+      margin-bottom: .75rem;
+    }
+    .cta-section p {
+      font-size: 14px; color: #8b949e;
+      max-width: 460px; margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+    .btn-whatsapp {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: #fff;
+      padding: 13px 28px; border-radius: 10px;
+      font-weight: 500; font-size: 15px;
+      border: none; cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: opacity .2s, transform .15s;
+    }
+    .btn-whatsapp:hover { opacity: .88; transform: translateY(-2px); }
+    .btn-whatsapp i { font-size: 20px; }
+
+    /* ── Divider ── */
+    .divider { border: none; border-top: 0.5px solid #21262d; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 12px; color: #484f58;
+      border-top: 0.5px solid #21262d;
+    }
+    footer span { color: #38bdf8; }
+
+    /* ── Screenshot placeholder ── */
+    .screenshot-placeholder {
+      background: #0d1117;
+      border: 0.5px dashed #30363d;
+      border-radius: 10px;
+      height: 160px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px;
+      color: #484f58; font-size: 12px;
+      margin-top: 1rem;
+    }
+    .screenshot-placeholder i { font-size: 28px; color: #30363d; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { padding: 5rem 1.25rem 3.5rem; }
+      .about-box { flex-direction: column; }
+      .hero-stats { gap: 2rem; }
+      .section { padding: 3rem 1.25rem; }
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp .6s ease both; }
+    .fade-up-1 { animation-delay: .1s; }
+    .fade-up-2 { animation-delay: .22s; }
+    .fade-up-3 { animation-delay: .34s; }
+    .fade-up-4 { animation-delay: .46s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <i class="ti ti-bolt" style="color:#38bdf8;font-size:20px"></i>
+        Auto<span>IA</span>
+      </div>
+      <div class="nav-links">
+        <a href="#workflows">Workflows</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="nav-cta">Falar comigo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <div class="badge fade-up fade-up-1">
+        <i class="ti ti-sparkles"></i>
+        Automação com IA · N8N
+      </div>
+      <h1 class="fade-up fade-up-2">
+        Workflows inteligentes<br>
+        via <span class="wa">WhatsApp</span>
+      </h1>
+      <p class="fade-up fade-up-3">
+        Automações prontas para uso que conectam IA, dados e ferramentas reais
+        — sem mudar de aplicativo, sem complicação.
+      </p>
+      <div class="hero-cta fade-up fade-up-4">
+        <a href="#workflows" class="btn-primary">
+          <i class="ti ti-layout-grid" style="font-size:16px"></i>
+          Ver workflows
+        </a>
+        <a href="#contato" class="btn-outline">
+          <i class="ti ti-brand-whatsapp" style="font-size:16px;color:#4ade80"></i>
+          Solicitar demo
+        </a>
+      </div>
+      <div class="hero-stats fade-up fade-up-4">
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Workflows prontos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Via WhatsApp</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">N8N</span>
+          <span class="stat-label">Plataforma de automação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WORKFLOWS -->
+  <section id="workflows" class="section">
+    <div class="container">
+      <div class="section-label">Portfólio</div>
+      <div class="section-title">Workflows disponíveis</div>
+      <div class="cards">
+
+        <!-- Card 1 — RH -->
+        <div class="card card-rh">
+          <div class="card-icon icon-blue">
+            <i class="ti ti-users" style="color:#60a5fa;font-size:22px"></i>
+          </div>
+          <h3>Assistente de RH</h3>
+          <p>
+            Funcionários tiram dúvidas sobre processos internos diretamente pelo WhatsApp.
+            Respostas precisas baseadas nos documentos oficiais da empresa via RAG.
+          </p>
+          <div class="tag-row">
+            <span class="tag tag-blue">RAG</span>
+            <span class="tag tag-blue">Pinecone</span>
+            <span class="tag tag-blue">N8N</span>
+            <span class="tag tag-blue">IA</span>
+          </div>
+          <div class="flow-box">
+            <div class="flow-label">Fluxo</div>
+            <div class="flow-steps">
+              <span class="step"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-cpu" style="color:#60a5fa"></i> N8N + RAG</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-database" style="color:#a78bfa"></i> Pinecone</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-check" style="color:#4ade80"></i> Resposta</span>
+            </div>
+          </div>
+          <!-- Substitua pelo print real do workflow -->
+          <div class="screenshot-placeholder">
+            <i class="ti ti-photo"></i>
+            <span>Adicione um print ou GIF do workflow aqui</span>
+          </div>
+        </div>
+
+        <!-- Card 2 — Agenda -->
+        <div class="card card-agenda">
+          <div class="card-icon icon-green">
+            <i class="ti ti-calendar-event" style="color:#4ade80;font-size:22px"></i>
+          </div>
+          <h3>Agendamento de Consultas</h3>
+          <p>
+            Marque, desmarque e consulte horários diretamente pelo WhatsApp.
+            Integração em tempo real com o Google Calendar, sem fricção.
+          </p>
+          <div class="tag-row">
+            <span class="tag tag-green">Google Calendar</span>
+            <span class="tag tag-green">N8N</span>
+            <span class="tag tag-green">IA</span>
+          </div>
+          <div class="flow-box">
+            <div class="flow-label">Fluxo</div>
+            <div class="flow-steps">
+              <span class="step"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-cpu" style="color:#60a5fa"></i> N8N + IA</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-calendar" style="color:#4ade80"></i> Calendar</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-check" style="color:#4ade80"></i> Resposta</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder">
+            <i class="ti ti-photo"></i>
+            <span>Adicione um print ou GIF do workflow aqui</span>
+          </div>
+        </div>
+
+        <!-- Card 3 — Tradutor -->
+        <div class="card card-tradutor">
+          <div class="card-icon icon-amber">
+            <i class="ti ti-language" style="color:#fbbf24;font-size:22px"></i>
+          </div>
+          <h3>Tradutor Universal</h3>
+          <p>
+            Traduza textos para qualquer idioma instantaneamente. Envie pelo WhatsApp
+            e receba a tradução em segundos, com contexto preservado.
+          </p>
+          <div class="tag-row">
+            <span class="tag tag-amber">Multilíngue</span>
+            <span class="tag tag-amber">N8N</span>
+            <span class="tag tag-amber">IA</span>
+          </div>
+          <div class="flow-box">
+            <div class="flow-label">Fluxo</div>
+            <div class="flow-steps">
+              <span class="step"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-cpu" style="color:#60a5fa"></i> N8N + IA</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-world" style="color:#fbbf24"></i> Tradução</span>
+              <span class="flow-arrow">›</span>
+              <span class="step"><i class="ti ti-check" style="color:#4ade80"></i> Resposta</span>
+            </div>
+          </div>
+          <div class="screenshot-placeholder">
+            <i class="ti ti-photo"></i>
+            <span>Adicione um print ou GIF do workflow aqui</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Como funciona</div>
+      <div class="section-title">Simples como uma mensagem</div>
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="how-num">01</div>
+          <h4>Você envia a mensagem</h4>
+          <p>Qualquer dispositivo com WhatsApp. Sem instalar nada extra.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">02</div>
+          <h4>A IA interpreta</h4>
+          <p>O N8N processa, consulta bases de dados ou APIs em tempo real.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">03</div>
+          <h4>Resposta instantânea</h4>
+          <p>Em segundos você recebe a informação ou confirmação de ação.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">04</div>
+          <h4>Zero fricção</h4>
+          <p>Sem logins extras, sem novos apps. Tudo no WhatsApp que você já usa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias" class="section">
+    <div class="container">
+      <div class="section-label">Stack</div>
+      <div class="section-title">Tecnologias utilizadas</div>
+      <div class="tech-grid">
+        <div class="tech-pill"><i class="ti ti-bolt"></i> N8N</div>
+        <div class="tech-pill"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp API</div>
+        <div class="tech-pill"><i class="ti ti-brain"></i> IA Generativa</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Pinecone (RAG)</div>
+        <div class="tech-pill"><i class="ti ti-calendar"></i> Google Calendar</div>
+        <div class="tech-pill"><i class="ti ti-world"></i> Tradução Multilíngue</div>
+        <div class="tech-pill"><i class="ti ti-cloud"></i> Cloud-based</div>
+        <div class="tech-pill"><i class="ti ti-lock"></i> Dados seguros</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-label">Sobre</div>
+      <div class="section-title">Quem está por trás</div>
+      <div class="about-box">
+        <div class="avatar">
+          <!-- Substitua pelas suas iniciais -->
+          MA
+        </div>
+        <div class="about-text">
+          <!-- Substitua pelo seu nome -->
+          <h3>Marcio Alvarenga</h3>
+          <div class="about-role">Especialista em Automação · N8N</div>
+          <p>
+            Desenvolvo soluções que conectam ferramentas do dia a dia — WhatsApp, Google Calendar,
+            bases de conhecimento — em fluxos inteligentes e fáceis de usar.
+            Sem código desnecessário, sem complicação. O objetivo é sempre o mesmo:
+            fazer a tecnologia trabalhar para as pessoas, não o contrário.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CTA CONTATO -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Quer esse workflow na sua empresa?</h2>
+        <p>
+          Me chama no WhatsApp para conversarmos sobre como adaptar esses fluxos
+          à sua realidade. Demo gratuita para os primeiros contatos.
+        </p>
+        <!-- Substitua o número pelo seu número real com DDI -->
+        <a href="https://wa.me/5511983867616?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20workflows." class="btn-whatsapp" target="_blank" rel="noopener">
+          <i class="ti ti-brand-whatsapp"></i>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Feito com <span>N8N + IA</span> · Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
