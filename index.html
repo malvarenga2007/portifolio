@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio · Automações com IA via WhatsApp</title>
+  <meta name="description" content="Workflows inteligentes que conectam IA, dados e ferramentas reais pelo WhatsApp — sem abrir um aplicativo diferente." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.5.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <i class="ti ti-bolt" style="color:#38bdf8;font-size:20px"></i>
+        AUTO <span>IA</span>
+      </div>
+      <div class="nav-links">
+        <a href="#workflows">Workflows</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#sobre">Sobre</a>
+        <a href="assistente_rh.html" class="nav-cta">Assistente RH Web</a>
+        <a href="assistente_agenda.html" class="nav-cta nav-cta--green">Assistente Agenda Web</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <div class="badge fade-up fade-up-1">
+        <i class="ti ti-sparkles"></i>
+        Automação com IA · N8N
+      </div>
+      <h1 class="fade-up fade-up-2">
+        Workflows inteligentes<br>
+        por <span class="wa">Chat, E-mail e mais</span>
+      </h1>
+      <p class="fade-up fade-up-3">
+        Automações prontas para uso que conectam IA, dados e ferramentas reais
+        — pelo WhatsApp, E-mail ou canal que você preferir, sem complicação.
+      </p>
+      <div class="hero-cta fade-up fade-up-4">
+        <a href="#workflows" class="btn-primary">
+          <i class="ti ti-layout-grid" style="font-size:16px"></i>
+          Ver workflows
+        </a>
+        <a href="#contato" class="btn-outline">
+          <i class="ti ti-brand-whatsapp" style="font-size:16px;color:#4ade80"></i>
+          Solicitar demo
+        </a>
+      </div>
+     </div>
+  </section>
+
+  <!-- WORKFLOWS -->  
+  <section id="workflows" class="section">
+    <div class="container">
+      <div class="section-label">Portfólio</div>
+      <div class="section-title">Workflows disponíveis</div>
+      <div class="cards">
+
+        <!-- Card 1 — RH -->
+        <div class="card card-rh">
+          <div class="card-icon icon-blue">
+            <i class="ti ti-users" style="color:#60a5fa;font-size:22px">RH</i>
+          </div>
+          <h3>Assistente de RH</h3>
+          <p>
+            <strong>
+              Funcionários tiram dúvidas sobre processos internos diretamente pelo WhatsAppvia WhatsApp, Chat Bot ou E-mail.
+              Respostas precisas baseadas nos documentos oficiais da empresa via RAG.
+            </strong>
+          </p>
+          <button class="btn-access" onclick="openModal('rh')">
+            <i class="ti ti-arrow-right"></i>
+            Acessar Demo
+          </button>
+        </div>
+
+        <!-- Card 2 — Agenda -->
+        <div class="card card-agenda">
+          <div class="card-icon icon-green">
+            <i class="ti ti-calendar-event" style="color:#4ade80;font-size:22px">AC</i>
+          </div>
+          <h3>Agendamento de Consultas</h3>
+          <p>
+            <strong>Marque, desmarque e consulte horários diretamente por WhatsAppvia WhatsApp, Chat Bot ou E-mail..
+            Integração em tempo real com o Google Calendar, sem fricção.</strong>
+          </p>
+          <button class="btn-access" onclick="openModal('agenda')">
+            <i class="ti ti-arrow-right"></i>
+            Acessar Demo
+          </button>
+        </div>
+
+        <!-- Card 3 — Tradutor -->
+        <div class="card card-tradutor">
+          <div class="card-icon icon-amber">
+            <i class="ti ti-language" style="color:#fbbf24;font-size:22px">TR</i>
+          </div>
+          <h3>Tradutor Universal</h3>
+          <p>
+            <strong>Traduza textos para qualquer idioma instantaneamente. Envie pelo WhatsApp
+            e receba a tradução em segundos, com contexto preservado.</strong>
+          </p>
+          <br>
+          <br>      
+          <button class="btn-access" onclick="openModal('tradutor')">
+            <i class="ti ti-arrow-right"></i>
+            Acessar Demo
+          </button>
+        </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona" class="section">
+    <div class="container">
+      <div class="section-label">Como funciona</div>
+      <div class="section-title">Simples como uma mensagem</div>
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="how-num">01</div>
+          <h4>Você envia a mensagem</h4>
+          <p>Qualquer dispositivo com acesso a WhatsApp, Browser ou E-mail. Sem instalar nada extra.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">02</div>
+          <h4>A IA interpreta</h4>
+          <p>O N8N processa, consulta bases de dados ou APIs em tempo real.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">03</div>
+          <h4>Resposta instantânea</h4>
+          <p>Em segundos você recebe a informação ou confirmação de ação.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num">04</div>
+          <h4>Zero fricção</h4>
+          <p>Sem logins extras, sem novos apps. Tudo no WhatsApp, Browser ou E-mail que você já usa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TECNOLOGIAS -->
+  <section id="tecnologias" class="section">
+    <div class="container">
+      <div class="section-label">Stack</div>
+      <div class="section-title">Tecnologias utilizadas</div>
+      <div class="tech-grid">
+        <div class="tech-pill"><i class="ti ti-bolt"></i> N8N</div>
+        <div class="tech-pill"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp API</div>
+        <div class="tech-pill"><i class="ti ti-brain"></i> IA Generativa</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Pinecone (RAG)</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Redis</div>   
+        <div class="tech-pill"><i class="ti ti-database"></i> OAuth</div>             
+        <div class="tech-pill"><i class="ti ti-calendar"></i> Google Calendar</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Google Drive</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Gmail API</div>        
+        <div class="tech-pill"><i class="ti ti-world"></i> Tradução Multilíngue</div>
+        <div class="tech-pill"><i class="ti ti-cloud"></i> Cloud-based</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> OpenAI</div>
+        <div class="tech-pill"><i class="ti ti-database"></i> Claude</div>  
+        <div class="tech-pill"><i class="ti ti-database"></i> Gemini</div>                      
+        <div class="tech-pill"><i class="ti ti-lock"></i> Dados seguros</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-label">Sobre</div>
+      <div class="section-title">Quem está por trás</div>
+      <div class="about-box">
+        <div class="avatar">
+          <!-- Substitua pelas suas iniciais -->
+          MA
+        </div>
+        <div class="about-text">
+          <!-- Substitua pelo seu nome -->
+          <h3>Marcio Alvarenga</h3>
+          <div class="about-role">Especialista em Automação · N8N</div>
+          <p>
+            Desenvolvo soluções que conectam ferramentas do dia a dia — WhatsApp, Google Calendar,
+            bases de conhecimento — em fluxos inteligentes e fáceis de usar.
+            Sem código desnecessário, sem complicação. O objetivo é sempre o mesmo:
+            fazer a tecnologia trabalhar para as pessoas, não o contrário.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CTA CONTATO -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Quer esse workflow na sua empresa?</h2>
+        <p>
+          Me chama no WhatsApp para conversarmos sobre como adaptar esses fluxos
+          à sua realidade. Demo gratuita para os primeiros contatos.
+        </p>
+        <!-- Substitua o número pelo seu número real com DDI -->
+        <a href="https://wa.me/5511983867616?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20workflows." class="btn-whatsapp" target="_blank" rel="noopener">
+          <i class="ti ti-brand-whatsapp"></i>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Feito com <span>N8N + IA</span> · Todos os direitos reservados</p>
+  </footer>
+
+  <!-- MODALS -->
+  <!-- Modal RH -->
+  <div class="modal-overlay" id="modal-rh">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="ti ti-users" style="color:#60a5fa"></i>
+          <h2>Assistente de RH</h2>
+        </div>
+        <button class="card-icon icon-blue" onclick="closeModal('rh')">
+          <i class="ti ti-calendar-event" style="color:#60a5fa;font-size:18px">X</i>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="workflow-intro">
+          <p>
+            <strong>Sistema inteligente de suporte a RH</strong><br>
+            Funcionários podem fazer perguntas sobre férias, benefícios, contratação e processos internos via WhatsApp, Chat Bot ou E-mail.
+            O sistema consulta documentos da empresa usando RAG (Retrieval-Augmented Generation) e retorna respostas precisas e contextualizadas.
+          </p>
+        </div>
+        <h5 style="color:#60a5fa;margin-bottom:1rem">Fluxo | Tecnologias</h5>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem">
+          <div class="tech-pill"><i class="ti ti-world"></i>WhatsApp | E-mail | Web</div>
+          <div class="tech-pill"><i class="ti ti-cpu"></i>N8N + RAG</div>
+          <div class="tech-pill"><i class="ti ti-brain"></i>Pinecone</div>
+          <div class="tech-pill"><i class="ti ti-brand-whatsapp"></i>WhatsApp | E-mail | Web</div>
+        </div>
+        <div class="modal-grid" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+          <div>
+            <div style="color: #60a5fa; font-weight: 600; margin-bottom: 0.75rem; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              <i class="ti ti-brand-whatsapp"></i> Via WhatsApp
+            </div>
+            <div class="modal-video">
+              <div class="video-ratio">
+                <iframe src="https://www.loom.com/embed/2a43de57db664039b72f424b90f1de26?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="color: #60a5fa; font-weight: 600; margin-bottom: 0.75rem; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              <i class="ti ti-world"></i> Via Web
+            </div>
+            <div class="modal-video">
+              <div class="video-ratio">
+                <iframe src="https://www.loom.com/embed/0befc97198df423c9e379f475ed824ba?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="color:#8b949e;margin-top:1.25rem">
+          Clique abaixo para acessar o assistente de RH em uma interface dedicada.
+        </p>
+        <a href="assistente_rh.html" class="btn-primary" style="display:inline-flex;align-items:center;margin-top:0.5rem">
+          <i class="ti ti-arrow-right"></i>
+          Abrir Assistente de RH
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Agenda -->
+  <div class="modal-overlay" id="modal-agenda">
+    <div class="modal-window">
+      <div class="modal-header">   
+        <div class="modal-title">
+          <i class="ti ti-calendar-event" style="color:#4ade80"></i>
+          <h2>Agendamento de Consultas</h2>
+        </div>
+        <button class="card-icon icon-green" onclick="closeModal('agenda')">
+          <i class="ti ti-calendar-event" style="color:#4ade80;font-size:18px">X</i>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="workflow-intro">
+          <p>
+            <strong>Marque, desmarque e consulte horários via WhatsApp, Chat Bot ou E-mail</strong><br>
+            Integração em tempo real com Google Calendar. Funciona como um assistente de agendamento
+            inteligente que sincroniza automaticamente com seu calendário corporativo.
+          </p>
+        </div>
+        <h5 style="color:#4ade80;margin-bottom:1rem">Fluxo | Tecnologias</h5>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem">
+          <div class="tech-pill"><i class="ti ti-world"></i>WhatsApp | E-mail | Web</div>
+          <div class="tech-pill"><i class="ti ti-cpu"></i>N8N</div>
+          <div class="tech-pill"><i class="ti ti-brain"></i>Google Calendar</div>
+          <div class="tech-pill"><i class="ti ti-brand-whatsapp"></i>WhatsApp | E-mail | Web</div>
+        </div>
+        <div class="modal-grid" style="grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+          <div>
+            <div style="color: #60a5fa; font-weight: 600; margin-bottom: 0.75rem; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              <i class="ti ti-brand-whatsapp"></i> Via WhatsApp
+            </div>
+            <div class="modal-video">
+              <div class="video-ratio">
+                <iframe src="https://www.loom.com/embed/44971bdda1ac43aa8b32c9fea383a132?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="color: #60a5fa; font-weight: 600; margin-bottom: 0.75rem; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+              <i class="ti ti-world"></i> Via Web
+            </div>
+            <div class="modal-video">
+              <div class="video-ratio">
+                <iframe src="https://www.loom.com/embed/7514019344f945e8b7a597103e698ade?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="color:#8b949e;margin-top:1.25rem">
+          Clique abaixo para acessar o assistente de agendamento em uma interface dedicada.
+        </p>
+        <a href="assistente_agenda.html" class="btn-primary" style="display:inline-flex;align-items:center;margin-top:0.5rem">
+          <i class="ti ti-arrow-right"></i>
+          Abrir Assistente de Agendamento
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Tradutor -->
+  <div class="modal-overlay" id="modal-tradutor">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="ti ti-language" style="color:#fbbf24">
+            <h2>Tradutor Universal</h2>
+          </i>
+        </div>
+        <button class="card-icon icon-amber" onclick="closeModal('tradutor')">
+          <i class="ti ti-calendar-event" style="color:#fbbf24;font-size:18px">X</i>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="workflow-intro">
+          <p>
+            <strong>Traduza textos para qualquer idioma instantaneamente</strong><br>
+            Envie o texto ou descreva o conteúdo via WhatsApp e receba a tradução em segundos,
+            preservando contexto e nuances do original.
+          </p>
+        </div>
+        <h5 style="color:#fbbf24;margin-bottom:1rem">Fluxo | Tecnologias</h5>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem">
+          <div class="tech-pill"><i class="ti ti-world"></i>WhatsApp</div>
+          <div class="tech-pill"><i class="ti ti-cpu"></i>N8N</div>
+          <div class="tech-pill"><i class="ti ti-brain"></i>IA</div>
+          <div class="tech-pill"><i class="ti ti-brand-whatsapp"></i>WhatsApp</div>
+        </div>
+        <div class="modal-grid">
+          <div class="modal-video">
+            <div class="video-ratio">
+              <iframe src="https://www.loom.com/embed/c33c85cbdcea45f8abcef60fc6dc8641?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Email -->
+  <div class="modal-overlay" id="modal-email">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="ti ti-mail" style="color:#c084fc"></i>
+          <h2>Automação por E-mail</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('email')">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+      <div class="modal-content">
+        <div class="workflow-intro">
+          <p>
+            <strong>Alertas, processamentos e respostas automáticas por e-mail</strong><br>
+            Receba relatórios agendados, notificações de eventos, respostas automáticas a mensagens
+            e processamento de dados - tudo organizado na sua caixa de entrada.
+          </p>
+        </div>
+        <h4 style="color:#c084fc;margin-bottom:1rem">Tecnologias</h4>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem">
+          <div class="tech-pill"><i class="ti ti-mail"></i> SMTP</div>
+          <div class="tech-pill"><i class="ti ti-cpu"></i> N8N</div>
+          <div class="tech-pill"><i class="ti ti-brain"></i> IA</div>
+          <div class="tech-pill"><i class="ti ti-database"></i> Data Processing</div>
+        </div>
+        <div class="modal-grid">
+          <div class="modal-video">
+            <div style="display:flex;align-items:center;justify-content:center;padding:2.5rem;color:#8b949e">
+              Demo por e-mail - em breve
+            </div>
+          </div>
+        </div>
+        <p style="color:#8b949e;margin-top:1rem">
+          Em desenvolvimento - Em breve disponível para acesso.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="modals.js"></script>
+</body>
+</html>

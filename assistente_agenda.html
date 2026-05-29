@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistente de Agendamento · AutoIA</title>
+  <meta name="description" content="Assistente de Agendamento inteligente com IA para marcar, desmarcar e consultar horários." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.5.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <i class="ti ti-calendar-event" style="color:#4ade80;font-size:20px"></i>
+        AG<span>IA</span>
+      </div>
+      <div class="nav-links">
+        <a href="#chat">Chat</a>
+        <a href="#info">Como funciona</a>
+        <a href="index.html" class="nav-cta nav-cta--green">Voltar Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-inner">
+        <div class="badge">
+          <i class="ti ti-sparkles"></i>
+          Assistente de Agendamento
+        </div>
+        <h1>
+          Marque, desmarque e consulte seus
+          <span class="accent">agendamentos com IA</span>
+        </h1>
+        <p>
+          Gerencie suas consultas e horários de forma inteligente, sincronizado em tempo real
+          com seu calendário, tudo direto no chat.
+        </p>
+        <div class="hero-cta">
+          <a href="#chat" class="btn-primary">
+            <i class="ti ti-calendar-event"></i>
+            Iniciar agendamento
+          </a>
+          <a href="#info" class="btn-outline">
+            <i class="ti ti-info-circle"></i>
+            Como funciona
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="section">
+      <div class="container">
+        <div class="card chat-card">
+          <div class="chat-header">
+            <div>
+              <div class="section-label">Chat Agenda</div>
+              <h2>Marque ou desmarque uma consulta</h2>
+            </div>
+            <div class="avatar">AG</div>
+          </div>
+
+          <div id="messages" class="messages"></div>
+
+          <div class="input-area">
+            <input id="input" placeholder="Digite sua solicitação..." autocomplete="off" />
+            <button onclick="sendMessage()" class="btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <div class="container">
+        <div class="section-label">Como funciona</div>
+        <h3 class="section-title">Fluxo do agendamento</h3>
+        <div class="flow-box">
+          <div class="flow-steps">
+            <span class="step"><i class="ti ti-calendar-event"></i> Você solicita um agendamento</span>
+            <span class="flow-arrow">›</span>
+            <span class="step"><i class="ti ti-robot"></i> O assistente verifica disponibilidade</span>
+            <span class="flow-arrow">›</span>
+            <span class="step"><i class="ti ti-check"></i> Confirmação instantânea</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container">
+      <p>Agende suas consultas de forma rápida e fácil. O assistente sincroniza automaticamente com seu calendário.</p>
+    </div>
+  </footer>
+
+  <script src="app-agenda.js"></script>
+</body>
+</html>

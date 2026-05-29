@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assistente de RH · AutoIA</title>
+  <meta name="description" content="Assistente de RH por WhatsApp com IA inteligente e respostas baseadas em regras internas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.5.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Página específica: alinhar logo e links à esquerda */
+    .nav-inner { justify-content: flex-start; gap: 24px; }
+    .nav-links { margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <i class="ti ti-users" style="color:#38bdf8;font-size:20px"></i>
+        RH<span>IA</span>
+      </div>
+      <div class="nav-links">
+        <a href="#chat">Chat</a>
+        <a href="#info">Como funciona</a>
+        <a href="../index.html" class="nav-cta nav-cta--green">Voltar Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-inner">
+        <div class="badge">
+          <i class="ti ti-sparkles"></i>
+          Assistente de RH
+        </div>
+        <h1>
+          Fale com seu assistente de RH
+          <span class="accent">via chat inteligente</span>
+        </h1>
+        <p>
+          Responda dúvidas sobre férias, benefícios, contratações e processos internos
+          com precisão e agilidade, em um layout moderno inspirado no site principal.
+        </p>
+        <div class="hero-cta">
+          <a href="#chat" class="btn-primary">
+            <i class="ti ti-brand-whatsapp"></i>
+            Iniciar conversa
+          </a>
+          <a href="#info" class="btn-outline">
+            <i class="ti ti-info-circle"></i>
+            Como funciona
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat" class="section">
+      <div class="container">
+        <div class="card chat-card">
+          <div class="chat-header">
+            <div>
+              <div class="section-label">Chat RH</div>
+              <h2>Pergunte algo sobre o departamento de recursos humanos</h2>
+            </div>
+            <div class="avatar">RH</div>
+          </div>
+
+          <div id="messages" class="messages"></div>
+
+          <div class="input-area">
+            <input id="input" placeholder="Digite sua pergunta..." autocomplete="off" />
+            <button onclick="sendMessage()" class="btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <div class="container">
+        <div class="section-label">Como funciona</div>
+        <h3 class="section-title">Fluxo do atendimento</h3>
+        <div class="flow-box">
+          <div class="flow-steps">
+            <span class="step"><i class="ti ti-brand-whatsapp"></i> Você envia a pergunta</span>
+            <span class="flow-arrow">›</span>
+            <span class="step"><i class="ti ti-robot"></i> O assistente consulta o RH</span>
+            <span class="flow-arrow">›</span>
+            <span class="step"><i class="ti ti-check"></i> Recebe a resposta instantânea</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container">
+      <p>Precisa de ajuda personalizada? Envie sua dúvida e o assistente de RH irá responder em instantes.</p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>
