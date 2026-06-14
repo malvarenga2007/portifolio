@@ -107,6 +107,23 @@ nav {
   color: #0d1117 !important;
   box-shadow: 0 8px 22px rgba(74, 222, 128, 0.24);
 }
+.nav-cta--purple {
+  background: #c084fc;
+  color: #0d1117 !important;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 700 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 6px 18px rgba(192, 132, 252, 0.18);
+}
+.nav-cta--purple:hover {
+  opacity: .95;
+  background: #c084fc;
+  color: #0d1117 !important;
+  box-shadow: 0 8px 22px rgba(192, 132, 252, 0.24);
+}
 
 .hero {
   padding: 7rem 1.5rem 5rem;
