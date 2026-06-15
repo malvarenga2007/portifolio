@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio · Automações com IA via WhatsApp</title>
-  <meta name="description" content="Workflows inteligentes que conectam IA, dados e ferramentas reais pelo WhatsApp — sem abrir um aplicativo diferente." />
+  <title>Marcio Alvarenga · Automação & IA em Produção</title>
+  <meta name="description" content="Soluções de IA em produção: agentes RAG, agendamento inteligente, controle de custos por tokens e dashboards de observabilidade — com Claude, OpenAI, N8N e PostgreSQL." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,9 +25,10 @@
         AUTO <span>IA</span>
       </div>
       <div class="nav-links">
-        <a href="#workflows">Workflows</a>
+        <a href="#workflows">Soluções</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#tecnologias">Tecnologias</a>
+        <a href="#observabilidade">Observabilidade</a>
+        <a href="#tecnologias">Stack</a>
         <a href="#sobre">Sobre</a>
         <a href="assistente_rh.html" class="nav-cta">Assistente RH Web</a>
         <a href="assistente_agenda.html" class="nav-cta nav-cta--green">Assistente Agenda Web</a>
@@ -45,15 +46,15 @@
     <div class="hero-inner">
       <div class="badge fade-up fade-up-1">
         <i class="ti ti-sparkles"></i>
-        Automação com IA · N8N
+        IA em Produção · N8N · Claude · OpenAI
       </div>
       <h1 class="fade-up fade-up-2">
-        Workflows inteligentes<br>
-        por <span class="wa">Chat, E-mail e mais</span>
+        Agentes de IA<br>
+        prontos para <span class="wa">produção real</span>
       </h1>
       <p class="fade-up fade-up-3">
-        Automações prontas para uso que conectam IA, dados e ferramentas reais
-        — pelo WhatsApp, E-mail ou canal que você preferir, sem complicação.
+        Automações que conectam LLMs, bases vetoriais e ferramentas reais —
+        com controle de custos, rastreamento de tokens e observabilidade completa.
       </p>
       <div class="hero-cta fade-up fade-up-4">
         <a href="#workflows" class="btn-primary">
@@ -72,7 +73,7 @@
   <section id="workflows" class="section">
     <div class="container">
       <div class="section-label">Portfólio</div>
-      <div class="section-title">Workflows disponíveis</div>
+      <div class="section-title">Soluções em produção</div>
       <div class="cards">
 
         <!-- Card 1 — RH -->
@@ -120,11 +121,26 @@
             e receba a tradução em segundos, com contexto preservado.</strong>
           </p>
           <br>
-          <br>      
           <button class="btn-access" onclick="openModal('tradutor')">
             <i class="ti ti-arrow-right"></i>
             Acessar Demo
           </button>
+        </div>
+
+        <!-- Card 4 — Dashboard de Tokens -->
+        <div class="card" style="border-color:#7c3aed33;background:linear-gradient(135deg,#161b22 80%,#1e1040 100%)">
+          <div class="card-icon icon-purple">
+            <i class="ti ti-chart-bar" style="color:#c084fc;font-size:22px"></i>
+          </div>
+          <h3>Dashboard de Observabilidade</h3>
+          <p>
+            <strong>Monitoramento em tempo real do consumo de tokens e custo por modelo (Claude, OpenAI).
+            Rastreamento por workflow com série temporal e breakdown entrada/saída.</strong>
+          </p>
+          <a href="https://textbook-cinema-stood-modern.trycloudflare.com" target="_blank" rel="noopener" class="btn-access" style="background:#7c3aed22;border-color:#7c3aed;color:#c084fc;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:auto">
+            <i class="ti ti-external-link"></i>
+            Abrir Dashboard
+          </a>
         </div>
       </div>
     </div>
@@ -169,22 +185,93 @@
     <div class="container">
       <div class="section-label">Stack</div>
       <div class="section-title">Tecnologias utilizadas</div>
-      <div class="tech-grid">
-        <div class="tech-pill"><i class="ti ti-bolt"></i> N8N</div>
-        <div class="tech-pill"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp API</div>
-        <div class="tech-pill"><i class="ti ti-brain"></i> IA Generativa</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> Pinecone (RAG)</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> Redis</div>   
-        <div class="tech-pill"><i class="ti ti-database"></i> OAuth</div>             
-        <div class="tech-pill"><i class="ti ti-calendar"></i> Google Calendar</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> Google Drive</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> Gmail API</div>        
-        <div class="tech-pill"><i class="ti ti-world"></i> Tradução Multilíngue</div>
-        <div class="tech-pill"><i class="ti ti-cloud"></i> Cloud-based</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> OpenAI</div>
-        <div class="tech-pill"><i class="ti ti-database"></i> Claude</div>  
-        <div class="tech-pill"><i class="ti ti-database"></i> Gemini</div>                      
-        <div class="tech-pill"><i class="ti ti-lock"></i> Dados seguros</div>
+
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;margin-bottom:.75rem">Orquestração & Infraestrutura</div>
+        <div class="tech-grid">
+          <div class="tech-pill"><i class="ti ti-bolt"></i> N8N</div>
+          <div class="tech-pill"><i class="ti ti-brand-docker"></i> Docker</div>
+          <div class="tech-pill"><i class="ti ti-server"></i> PostgreSQL</div>
+          <div class="tech-pill"><i class="ti ti-database"></i> Redis</div>
+          <div class="tech-pill"><i class="ti ti-cloud"></i> Cloudflare Tunnel</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;margin-bottom:.75rem">Modelos de IA</div>
+        <div class="tech-grid">
+          <div class="tech-pill"><i class="ti ti-brain"></i> Claude (Anthropic)</div>
+          <div class="tech-pill"><i class="ti ti-brain"></i> OpenAI GPT</div>
+          <div class="tech-pill"><i class="ti ti-vector"></i> OpenAI Embeddings</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;margin-bottom:.75rem">RAG & Busca Vetorial</div>
+        <div class="tech-grid">
+          <div class="tech-pill"><i class="ti ti-database"></i> Pinecone</div>
+          <div class="tech-pill"><i class="ti ti-file-text"></i> Google Drive (base de docs)</div>
+          <div class="tech-pill"><i class="ti ti-search"></i> Retrieval-Augmented Generation</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.25rem">
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;margin-bottom:.75rem">APIs & Integrações</div>
+        <div class="tech-grid">
+          <div class="tech-pill"><i class="ti ti-brand-whatsapp" style="color:#4ade80"></i> WhatsApp (Meta API)</div>
+          <div class="tech-pill"><i class="ti ti-calendar"></i> Google Calendar</div>
+          <div class="tech-pill"><i class="ti ti-mail"></i> Gmail API</div>
+          <div class="tech-pill"><i class="ti ti-lock"></i> OAuth 2.0</div>
+          <div class="tech-pill"><i class="ti ti-world"></i> Tradução Multilíngue</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8b949e;margin-bottom:.75rem">Observabilidade</div>
+        <div class="tech-grid">
+          <div class="tech-pill"><i class="ti ti-chart-bar" style="color:#c084fc"></i> Dashboard FastAPI</div>
+          <div class="tech-pill"><i class="ti ti-coins" style="color:#c084fc"></i> Rastreamento de Tokens</div>
+          <div class="tech-pill"><i class="ti ti-currency-dollar" style="color:#c084fc"></i> Controle de Custo por Workflow</div>
+          <div class="tech-pill"><i class="ti ti-timeline" style="color:#c084fc"></i> Série Temporal por Modelo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- OBSERVABILIDADE -->
+  <section id="observabilidade" class="section">
+    <div class="container">
+      <div class="section-label">Governança</div>
+      <div class="section-title">Controle total de custo e consumo</div>
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="how-num" style="color:#c084fc">01</div>
+          <h4>Captura de tokens por chamada</h4>
+          <p>Cada requisição às APIs da Anthropic e OpenAI registra tokens de entrada, saída e custo em USD no PostgreSQL.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num" style="color:#c084fc">02</div>
+          <h4>Rastreamento por workflow</h4>
+          <p>O custo é associado ao workflow N8N que originou a chamada, permitindo identificar quais automações consomem mais.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num" style="color:#c084fc">03</div>
+          <h4>Dashboard em tempo real</h4>
+          <p>API FastAPI + Chart.js exibindo KPIs, série temporal, breakdown por modelo e ranking de workflows por custo.</p>
+        </div>
+        <div class="how-item">
+          <div class="how-num" style="color:#c084fc">04</div>
+          <h4>Acesso via Cloudflare Tunnel</h4>
+          <p>Dashboard exposto com segurança sem abrir portas no servidor, usando túnel criptografado Cloudflare.</p>
+        </div>
+      </div>
+      <div style="margin-top:2rem;text-align:center">
+        <a href="https://textbook-cinema-stood-modern.trycloudflare.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">
+          <i class="ti ti-chart-bar"></i>
+          Abrir Dashboard ao vivo
+        </a>
       </div>
     </div>
   </section>
@@ -197,20 +284,22 @@
       <div class="section-label">Sobre</div>
       <div class="section-title">Quem está por trás</div>
       <div class="about-box">
-        <div class="avatar">
-          <!-- Substitua pelas suas iniciais -->
-          MA
-        </div>
+        <div class="avatar">MA</div>
         <div class="about-text">
-          <!-- Substitua pelo seu nome -->
           <h3>Marcio Alvarenga</h3>
-          <div class="about-role">Especialista em Automação · N8N</div>
+          <div class="about-role">Analista de Inteligência Artificial · Automação com N8N</div>
           <p>
-            Desenvolvo soluções que conectam ferramentas do dia a dia — WhatsApp, Google Calendar,
-            bases de conhecimento — em fluxos inteligentes e fáceis de usar.
-            Sem código desnecessário, sem complicação. O objetivo é sempre o mesmo:
-            fazer a tecnologia trabalhar para as pessoas, não o contrário.
+            Desenvolvo e coloco soluções de IA em produção — de agentes RAG com busca vetorial
+            a pipelines de agendamento inteligente integrados ao Google Calendar.
+            Cada projeto inclui rastreamento de tokens, controle de custo por modelo e
+            observabilidade completa via dashboard, porque IA em produção precisa ser mensurável.
           </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem">
+            <div class="tech-pill" style="font-size:12px"><i class="ti ti-brain"></i> Claude · OpenAI</div>
+            <div class="tech-pill" style="font-size:12px"><i class="ti ti-bolt"></i> N8N</div>
+            <div class="tech-pill" style="font-size:12px"><i class="ti ti-database"></i> Pinecone · PostgreSQL · Redis</div>
+            <div class="tech-pill" style="font-size:12px"><i class="ti ti-brand-docker"></i> Docker</div>
+          </div>
         </div>
       </div>
     </div>
@@ -238,7 +327,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Feito com <span>N8N + IA</span> · Todos os direitos reservados</p>
+    <p>Feito com <span>N8N · Claude · OpenAI</span> · Marcio Alvarenga</p>
   </footer>
 
   <!-- MODALS -->
@@ -250,8 +339,8 @@
           <i class="ti ti-users" style="color:#60a5fa"></i>
           <h2>Assistente de RH</h2>
         </div>
-        <button class="card-icon icon-blue" onclick="closeModal('rh')">
-          <i class="ti ti-calendar-event" style="color:#60a5fa;font-size:18px">X</i>
+        <button class="modal-close" onclick="closeModal('rh')">
+          <i class="ti ti-x"></i>
         </button>
       </div>
       <div class="modal-content">
@@ -310,8 +399,8 @@
           <i class="ti ti-calendar-event" style="color:#4ade80"></i>
           <h2>Agendamento de Consultas</h2>
         </div>
-        <button class="card-icon icon-green" onclick="closeModal('agenda')">
-          <i class="ti ti-calendar-event" style="color:#4ade80;font-size:18px">X</i>
+        <button class="modal-close" onclick="closeModal('agenda')">
+          <i class="ti ti-x"></i>
         </button>
       </div>
       <div class="modal-content">
@@ -367,12 +456,11 @@
     <div class="modal-window">
       <div class="modal-header">
         <div class="modal-title">
-          <i class="ti ti-language" style="color:#fbbf24">
-            <h2>Tradutor Universal</h2>
-          </i>
+          <i class="ti ti-language" style="color:#fbbf24"></i>
+          <h2>Tradutor Universal</h2>
         </div>
-        <button class="card-icon icon-amber" onclick="closeModal('tradutor')">
-          <i class="ti ti-calendar-event" style="color:#fbbf24;font-size:18px">X</i>
+        <button class="modal-close" onclick="closeModal('tradutor')">
+          <i class="ti ti-x"></i>
         </button>
       </div>
       <div class="modal-content">
